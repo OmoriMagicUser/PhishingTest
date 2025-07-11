@@ -14,7 +14,8 @@ app.get("/live", (req, res, next) => {
     res.sendFile(__dirname + "/public/live/index.html");
 });
 
-app.post("/userdata", (req, res, next) => {
+app.post("/userdata", (req, res, next) => { 
+    console.log("API Submitted")
     try {
         var data = `user: ${req.body.userName} password: ${req.body.password}`
         console.log(data);
